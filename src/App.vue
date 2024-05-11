@@ -1,33 +1,32 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+	<main
+		class="bg-very-light-gray px-6 py-24 flex flex-col lg:flex-row lg:h-screen lg:py-32 lg:px-64"
+	>
+		<Card
+			firstCard
+			title="Sedans"
+			category="sedans"
+			content="Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising
+				in the city or on your next road trip."
+		/>
+		<Card
+			title="SUVs"
+			category="suvs"
+			content="Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+  and off-road adventures."
+		/>
+		<Card
+			lastCard
+			title="Luxury"
+			category="luxury"
+			content="Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+  rental and arrive in style."
+		/>
+	</main>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script setup>
+import Card from './components/Card.vue'
+</script>
+
+<style scoped></style>
